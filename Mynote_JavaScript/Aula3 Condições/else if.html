@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar</title>
+</head>
+<body>
+    <h1>Radar de velocidade</h1>
+    <input type="number" name="Vel" id="vel">km/h
+    <input type="button" value="Verificar"  onclick="clicar()">
+    <div id="Res">Resposta</div>
+    <script>
+        var r=(document.getElementById('vel'))
+        var res=document.querySelector('div#Res')
+        var but=document.getElementById('Verificar') 
+       // but.addEventListener('click',clicar)
+        function clicar(){
+            var re=(document.getElementById('vel'))
+            var r=Number(re.value)
+            var res=document.querySelector('div#Res')
+            res.innerHTML=`<p>Sua velociade atual é de ${r} Km/h</p>`
+            if(r<60){
+                res.innerHTML+= '<p>O carro esta no limite de velocidade</p>'
+                res.style.color='write'
+                res.style.background='green'
+            }
+            else if (r==60){ //condicional com else if
+                res.innerHTML+='<p>O carro está no limite</p>'
+                res.style.color='write'
+                res.style.background='orange'
+            }
+            else {
+                res.innerHTML+='<p>O carro está acima do limite</p>'
+                res.style.color='write'
+                res.style.background='red'
+            }
+        }
+    </script>
+</body>
+</html>

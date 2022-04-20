@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+</head>
+<body>
+    <h1>Dia da semana</h1>
+    <p id="day">Hoje é Dia </p>
+    <script>
+        var dathj=new Date()   //Colocar a data completa na variavel
+        var diaSem=dathj.getDay()  //acessar apenas o dia da semana
+                                // .getHours / .getMonth tem varias variaveis dos dia
+        var imp=document.getElementById('day')
+        switch (diaSem){
+            case 0:
+                imp.innerHTML=`Domingo`
+                break
+            case 1:
+                imp.innerHTML=`Segunda`
+                break
+            case 2:
+                imp.innerHTML=`Terça`
+                break
+            case 3:
+                imp.innerHTML=`Quarta`
+                break
+            case 4:
+                imp.innerHTML=`Quinta`
+                break
+            case 5:
+                imp.innerHTML=`Sexta`
+                break
+            default :
+                imp.innerHTML=`Sábado`
+                break
+        }
+    </script>
+</body>
+</html>

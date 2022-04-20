@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: rgb(229, 255, 0);
+        color: blueviolet;
+        font: normal 20pt Arial;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Estudando com o DOM</h1>
+    <p>Aqui</p>
+    <p>Legal</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var p1=window.document.getElementsByTagName('p')[0] // Pergar paragrafo em HTML e atribuir em uma variavel
+        //numero em [] define a seguencia do paragrafo que inicia em 0
+        //getElemenrsBy... é para acessar mais de uma objeto
+        window.document.write('Esta escrito assim: ' + p1.innerText) // Selecionar variavel atribuida
+        p1.style.color = 'red' //mudar cor 
+        //Para acessar apensa um objeto coloca apenas''.' e o objeto 
+        var corpo = document.body
+        corpo.style.background='grey'
+        /*
+        //Acessarçar por ID
+        var ad= window.document.getElementById('msg')
+        ad.innerText='Happy' 
+        //Pode ser feito direto sem variavel 
+        //window.document.getElementById('msg').innerText ='Feliz'
+        */
+        var d = window.document.querySelector('div#msg') // id usa # caso for class usa .
+        d.style.background = 'green'
+
+    </script>
+</body>
+</html>
